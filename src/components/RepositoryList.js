@@ -1,17 +1,26 @@
 import React from "react";
 
+import "./style/RepositoryList.css";
+
 function RepositoryList(props) {
-  const { repositories, onSelect } = props;
+  const { list, onSelect } = props;
   return (
-    <div className="repository-list">
-      {repositories.map(function (repo) {
-        return (
-          <div onClick={() => onSelect(repo.id)} key={repo.id}>
-            {repo.name}
-          </div>
-        );
-      })}
-    </div>
+    list.length > 0 && (
+      <div className="repository-list">
+        <h3>Repositories</h3>
+        {list.map(function (repo) {
+          return (
+            <div
+              className="repository-item"
+              onClick={() => onSelect(repo.id)}
+              key={repo.id}
+            >
+              {repo.name}
+            </div>
+          );
+        })}
+      </div>
+    )
   );
 }
 

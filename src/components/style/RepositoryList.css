@@ -1,0 +1,4 @@
+.repository-list .repository-item {
+  cursor: pointer;
+  color: rgb(182, 10, 159);
+}

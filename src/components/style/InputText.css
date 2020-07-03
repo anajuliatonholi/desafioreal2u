@@ -1,3 +1,9 @@
 .inputText {
-  background-color: rgb(182, 10, 159);
+  padding: 5px 10px;
+  border: solid rgb(182, 10, 159) 2px;
+  border-radius: 4px;
+}
+
+.inputText input {
+  border: 0;
 }
